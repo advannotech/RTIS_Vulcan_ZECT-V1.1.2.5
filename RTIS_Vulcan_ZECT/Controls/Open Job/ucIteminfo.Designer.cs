@@ -57,7 +57,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 559F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1182, 559);
             this.tableLayoutPanel1.TabIndex = 73;
             // 
@@ -88,6 +88,9 @@
             this.txtBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBatch.Location = new System.Drawing.Point(57, 375);
             this.txtBatch.Name = "txtBatch";
+            // 
+            // 
+            // 
             this.txtBatch.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBatch.Properties.Appearance.Options.UseFont = true;
             this.txtBatch.Properties.Appearance.Options.UseTextOptions = true;
@@ -118,6 +121,9 @@
             this.txtItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtItem.Location = new System.Drawing.Point(57, 145);
             this.txtItem.Name = "txtItem";
+            // 
+            // 
+            // 
             this.txtItem.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItem.Properties.Appearance.Options.UseFont = true;
             this.txtItem.Properties.Appearance.Options.UseTextOptions = true;
