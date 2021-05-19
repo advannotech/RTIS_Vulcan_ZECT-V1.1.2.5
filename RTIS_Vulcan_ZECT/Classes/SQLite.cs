@@ -30,7 +30,7 @@ namespace RTIS_Vulcan_ZECT.Classes
                     {
                         case "1":
 
-                            string insertString = "ServerIP|192.168.1.6~";
+                            string insertString = "ServerIP|localhost~";
                             insertString += "ServerPort|32017~";
                             insertString += "ZectWhse|ZECT~";
                             insertString += "ZectIT|ZECT IT~";
