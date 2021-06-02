@@ -98,6 +98,7 @@
             this.txtBatch.Size = new System.Drawing.Size(473, 80);
             this.txtBatch.TabIndex = 62;
             this.txtBatch.Click += new System.EventHandler(this.txtBatch_Click);
+            this.txtBatch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBatch_KeyPress);
             // 
             // labelControl1
             // 
