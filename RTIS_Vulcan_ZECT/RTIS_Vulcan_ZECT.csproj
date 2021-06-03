@@ -60,6 +60,8 @@
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.SQLite">
@@ -316,6 +318,8 @@
     <Compile Include="Controls\Reprint config Tags\ucRPSelectLot.Designer.cs">
       <DependentUpon>ucRPSelectLot.cs</DependentUpon>
     </Compile>
+    <Compile Include="csDAL.cs" />
+    <Compile Include="csParameterListType.cs" />
     <Compile Include="Forms\frmConfirm.cs">
       <SubType>Form</SubType>
     </Compile>

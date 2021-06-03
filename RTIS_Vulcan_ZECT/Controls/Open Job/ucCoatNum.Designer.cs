@@ -130,7 +130,7 @@
             this.btnForth.Name = "btnForth";
             this.btnForth.Size = new System.Drawing.Size(961, 101);
             this.btnForth.TabIndex = 72;
-            this.btnForth.Text = "FORTH";
+            this.btnForth.Text = "FOURTH";
             this.btnForth.Click += new System.EventHandler(this.btnForth_Click);
             // 
             // btnThird
