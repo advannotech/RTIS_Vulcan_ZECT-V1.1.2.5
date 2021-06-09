@@ -12,6 +12,7 @@ using System.Diagnostics;
 using RTIS_Vulcan_ZECT.Forms;
 using RTIS_Vulcan_ZECT.Classes;
 using System.Configuration;
+using System.Drawing;
 
 namespace RTIS_Vulcan_ZECT.Controls
 {
@@ -34,13 +35,13 @@ namespace RTIS_Vulcan_ZECT.Controls
         public frmMain main;
         Panel parent;
 
-
         public ucCoatNum(Panel _parent, frmMain _main)
         {
             InitializeComponent();
             parent = _parent;
             main = _main;
         }
+
         private void ucCoatNum_Load(object sender, EventArgs e)
         {
             this.Size = parent.Size;
@@ -56,20 +57,27 @@ namespace RTIS_Vulcan_ZECT.Controls
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 conn.Open();
-                cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs] WHERE " + "'" + cCode + "' LIKE '%1st%' AND " + "'" + cCode + "'  NOT LIKE '%2nd%' AND " + "'" + cCode + "' NOT LIKE '%3rd%' AND " + "'" + cCode + "'  NOT LIKE '%4th%' AND vLotNumber = " + "'" + lNum + "' ORDER BY vLotNumber";
-                //cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs]  WHERE vCatalystCode= " + "'" + cCode + "'";
-
+               // cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs] WHERE " + "'" + cCode + "' LIKE '%1st%' AND " + "'" + cCode + "'  NOT LIKE '%2nd%' AND " + "'" + cCode + "' NOT LIKE '%3rd%' AND " + "'" + cCode + "'  NOT LIKE '%4th%' AND vLotNumber = " + "'" + lNum + "' ORDER BY vLotNumber";
+                cmd.CommandText = "SELECT [vCoat] from [tbl_RTIS_Zect_Jobs]  WHERE [vCoat]='1st' AND [vLotNumber]= " + "'" + lNum + "'";
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 dataReader.Read();
                 if (dataReader.HasRows == true)
                 {
                     msg = new frmMsg(lNum,
-                          "Lot number is already used in first coat",
+                          "Lot number already used for |First Coat|",
                           GlobalVars.msgState.Info);
                     msg.ShowDialog();
-                    btnfirst.Visible = false;
-                    btnThird.Visible = false;
-                    btnForth.Visible = false;
+                    conn.Close();
+                    btnfirst.Enabled = false;
+                }
+                else if(dataReader.HasRows == false)
+                {
+                    msg = new frmMsg(lNum,
+                         "Invalid Lot Number",
+                    GlobalVars.msgState.Info);
+                    msg.ShowDialog();
+                    conn.Close();
+                   
                 }
                 else
                 {
@@ -90,13 +98,8 @@ namespace RTIS_Vulcan_ZECT.Controls
             {
                 ExHandler.showErrorEx(ex);
             }
-
         }
-
-        public bool ShowButton()
-        {
-            return true;
-        }
+            
 
         private void btnSecond_Click(object sender, EventArgs e)
         {
@@ -104,25 +107,33 @@ namespace RTIS_Vulcan_ZECT.Controls
             {
                 string cCode = GlobalVars.OJCheckSheet;
                 string lNum = GlobalVars.OJLotNumber;
-
+                
                 SqlConnection conn = new SqlConnection(strcon);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 conn.Open();
-                cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs] WHERE " + "'" + cCode + "' LIKE '%2nd%' AND " + "'" + cCode + "'  NOT LIKE '%1st%' AND " + "'" + cCode + "' NOT LIKE '%3rd%' AND " + "'" + cCode + "'  NOT LIKE '%4th%' AND vLotNumber = " + "'" + lNum + "' ORDER BY vLotNumber";
-                //cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs]  WHERE vCatalystCode= " + "'" + cCode + "'";
+                // cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs] WHERE " + "'" + cCode + "' LIKE '%1st%' AND " + "'" + cCode + "'  NOT LIKE '%2nd%' AND " + "'" + cCode + "' NOT LIKE '%3rd%' AND " + "'" + cCode + "'  NOT LIKE '%4th%' AND vLotNumber = " + "'" + lNum + "' ORDER BY vLotNumber";
+                cmd.CommandText = "SELECT [vCoat] from [tbl_RTIS_Zect_Jobs]  WHERE [vCoat]='2nd' AND [vLotNumber]= " + "'" + lNum + "'";
 
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 dataReader.Read();
                 if (dataReader.HasRows == true)
                 {
                     msg = new frmMsg(lNum,
-                          "Lot number is already used in second coat",
+                          "Lot number already used for |Second Coat|",
                           GlobalVars.msgState.Info);
                     msg.ShowDialog();
-                    btnfirst.Visible = false;
-                    btnSecond.Visible = false;
-                    btnForth.Visible = false;
+                    conn.Close();
+                    btnSecond.Enabled = false;
+                }
+                else if (dataReader.HasRows == false)
+                {
+                    msg = new frmMsg(lNum,
+                         "Invalid Lot Number",
+                    GlobalVars.msgState.Info);
+                    msg.ShowDialog();
+                    conn.Close();
+                    
                 }
                 else
                 {
@@ -143,11 +154,11 @@ namespace RTIS_Vulcan_ZECT.Controls
             {
                 ExHandler.showErrorEx(ex);
             }
-           
         }
 
         private void btnThird_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string cCode = GlobalVars.OJCheckSheet;
@@ -157,20 +168,28 @@ namespace RTIS_Vulcan_ZECT.Controls
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 conn.Open();
-                cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs] WHERE " + "'" + cCode + "' LIKE '%3rd%' AND " + "'" + cCode + "'  NOT LIKE '%1st%' AND " + "'" + cCode + "' NOT LIKE '%2nd%' AND " + "'" + cCode + "'  NOT LIKE '%4th%' AND vLotNumber = " + "'" + lNum + "' ORDER BY vLotNumber";
-                //cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs]  WHERE vCatalystCode= " + "'" + cCode + "'";
+                // cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs] WHERE " + "'" + cCode + "' LIKE '%1st%' AND " + "'" + cCode + "'  NOT LIKE '%2nd%' AND " + "'" + cCode + "' NOT LIKE '%3rd%' AND " + "'" + cCode + "'  NOT LIKE '%4th%' AND vLotNumber = " + "'" + lNum + "' ORDER BY vLotNumber";
+                cmd.CommandText = "SELECT [vCoat] from [tbl_RTIS_Zect_Jobs]  WHERE [vCoat]='3rd' AND [vLotNumber]= " + "'" + lNum + "'";
 
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 dataReader.Read();
                 if (dataReader.HasRows == true)
                 {
                     msg = new frmMsg(lNum,
-                          "Lot number is already used in third coat",
+                          "Lot number already used for |Third Coat|",
                           GlobalVars.msgState.Info);
                     msg.ShowDialog();
-                    btnfirst.Visible = false;
-                    btnSecond.Visible = false;
-                    btnThird.Visible = false;
+                    conn.Close();
+                    btnThird.Enabled = false;
+                }
+                else if (dataReader.HasRows == false)
+                {
+                    msg = new frmMsg(lNum,
+                         "Invalid Lot Number",
+                    GlobalVars.msgState.Info);
+                    msg.ShowDialog();
+                    conn.Close();
+                   
                 }
                 else
                 {
@@ -195,6 +214,8 @@ namespace RTIS_Vulcan_ZECT.Controls
 
         private void btnForth_Click(object sender, EventArgs e)
         {
+
+
             try
             {
                 string cCode = GlobalVars.OJCheckSheet;
@@ -204,21 +225,28 @@ namespace RTIS_Vulcan_ZECT.Controls
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 conn.Open();
-                cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs] WHERE " + "'" + cCode + "' LIKE '%4th%' AND " + "'" + cCode + "'  NOT LIKE '%1st%' AND " + "'" + cCode + "' NOT LIKE '%2nd%' AND " + "'" + cCode + "'  NOT LIKE '%3rd%' AND vLotNumber = " + "'" + lNum + "' ORDER BY vLotNumber";
-                //cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs]  WHERE vCatalystCode= " + "'" + cCode + "'";
+                // cmd.CommandText = "SELECT * FROM [tbl_RTIS_Zect_Jobs] WHERE " + "'" + cCode + "' LIKE '%1st%' AND " + "'" + cCode + "'  NOT LIKE '%2nd%' AND " + "'" + cCode + "' NOT LIKE '%3rd%' AND " + "'" + cCode + "'  NOT LIKE '%4th%' AND vLotNumber = " + "'" + lNum + "' ORDER BY vLotNumber";
+                cmd.CommandText = "SELECT [vCoat] from [tbl_RTIS_Zect_Jobs]  WHERE [vCoat]='4th' AND [vLotNumber]= " + "'" + lNum + "'";
 
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 dataReader.Read();
                 if (dataReader.HasRows == true)
                 {
                     msg = new frmMsg(lNum,
-                          "Lot number is already used in fourth coat",
+                          "Lot number already used for |Fourth Coat|",
                           GlobalVars.msgState.Info);
                     msg.ShowDialog();
-                    btnfirst.Enabled = false;
-                    btnSecond.Enabled = false;
-                    btnThird.Enabled = false;
+                    conn.Close();
                     btnForth.Enabled = false;
+                }
+                else if (dataReader.HasRows == false)
+                {
+                    msg = new frmMsg(lNum,
+                         "Invalid Lot Number",
+                    GlobalVars.msgState.Info);
+                    msg.ShowDialog();
+                    conn.Close();
+                   
                 }
                 else
                 {
@@ -239,7 +267,6 @@ namespace RTIS_Vulcan_ZECT.Controls
             {
                 ExHandler.showErrorEx(ex);
             }
-
         }
 
         private void btnLogoff_Click(object sender, EventArgs e)

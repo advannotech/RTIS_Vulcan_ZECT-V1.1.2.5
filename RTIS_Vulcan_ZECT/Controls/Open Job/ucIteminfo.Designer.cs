@@ -88,9 +88,6 @@
             this.txtBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBatch.Location = new System.Drawing.Point(57, 375);
             this.txtBatch.Name = "txtBatch";
-            // 
-            // 
-            // 
             this.txtBatch.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBatch.Properties.Appearance.Options.UseFont = true;
             this.txtBatch.Properties.Appearance.Options.UseTextOptions = true;
@@ -122,9 +119,6 @@
             this.txtItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtItem.Location = new System.Drawing.Point(57, 145);
             this.txtItem.Name = "txtItem";
-            // 
-            // 
-            // 
             this.txtItem.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItem.Properties.Appearance.Options.UseFont = true;
             this.txtItem.Properties.Appearance.Options.UseTextOptions = true;
