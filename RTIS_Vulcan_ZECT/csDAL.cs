@@ -11,7 +11,7 @@ namespace RTIS_Vulcan_ZECT
 {
     public class csDAL
     {
-        private string strConn = ConfigurationManager.ConnectionStrings["csConnectionString"].ConnectionString.ToString();
+        private string strConn = ConfigurationManager.ConnectionStrings["cataConnectionString"].ConnectionString.ToString();
 
         private SqlConnection conn;
         private string err = string.Empty;
