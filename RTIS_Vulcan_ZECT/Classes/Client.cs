@@ -288,6 +288,10 @@ namespace RTIS_Vulcan_ZECT.Classes
         }
         #endregion
 
+        #region check coats
+
+        #endregion
+
         #region Reprint Job Tags
         public static string getReprintJobCoats(string itemInfo)
         {

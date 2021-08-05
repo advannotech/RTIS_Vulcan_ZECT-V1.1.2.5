@@ -94,7 +94,7 @@ namespace RTIS_Vulcan_ZECT.Controls
                             break;
                     }
 
-                    string jobOpened = Client.ZectOpenJob(GlobalVars.OJCheckSheet + "|" + coatNum + "|" + GlobalVars.OJLotNumber  + "|" + GlobalVars.OJSlurry + "|" + GlobalVars.OJSlurryLot + "|" + txtQty.Text + "|" + GlobalVars.zectWhse + "|" + GlobalVars.zectIT + "|" + GlobalVars.userName + "|" + GlobalVars.OJSlurryTankType + "|" + GlobalVars.OJSlurryTank + "|" + GlobalVars.OJWetWeight + "|" + GlobalVars.OJDryWeight);
+                    string jobOpened = Client.ZectOpenJob(GlobalVars.OJCheckSheet + "|" + coatNum + "|" + GlobalVars.OJLotNumber + "|" + GlobalVars.OJSlurry + "|" + GlobalVars.OJSlurryLot + "|" + txtQty.Text + "|" + GlobalVars.zectWhse + "|" + GlobalVars.zectIT + "|" + GlobalVars.userName + "|" + GlobalVars.OJSlurryTankType + "|" + GlobalVars.OJSlurryTank + "|" + GlobalVars.OJWetWeight + "|" + GlobalVars.OJDryWeight); 
                     if (jobOpened != string.Empty)
                     {
                         switch (jobOpened.Split('*')[0])
