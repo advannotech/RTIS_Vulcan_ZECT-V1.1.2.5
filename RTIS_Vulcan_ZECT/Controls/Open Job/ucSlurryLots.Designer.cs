@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlParent = new System.Windows.Forms.Panel();
-            this.pnlItems = new System.Windows.Forms.Panel();
             this.vsbFG = new DevExpress.XtraEditors.VScrollBar();
+            this.pnlItems = new System.Windows.Forms.Panel();
             this.btnBack = new DevExpress.XtraEditors.SimpleButton();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -43,34 +43,34 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlParent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlParent.Controls.Add(this.pnlItems);
             this.pnlParent.Controls.Add(this.vsbFG);
-            this.pnlParent.Location = new System.Drawing.Point(6, 112);
+            this.pnlParent.Controls.Add(this.pnlItems);
+            this.pnlParent.Location = new System.Drawing.Point(7, 120);
             this.pnlParent.Name = "pnlParent";
-            this.pnlParent.Size = new System.Drawing.Size(1210, 626);
+            this.pnlParent.Size = new System.Drawing.Size(1209, 626);
             this.pnlParent.TabIndex = 99;
+            // 
+            // vsbFG
+            // 
+            this.vsbFG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.vsbFG.Location = new System.Drawing.Point(1147, -4);
+            this.vsbFG.Margin = new System.Windows.Forms.Padding(4);
+            this.vsbFG.Name = "vsbFG";
+            this.vsbFG.Size = new System.Drawing.Size(60, 624);
+            this.vsbFG.TabIndex = 1;
             // 
             // pnlItems
             // 
             this.pnlItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlItems.AutoScroll = true;
             this.pnlItems.AutoSize = true;
             this.pnlItems.Location = new System.Drawing.Point(3, 3);
             this.pnlItems.Name = "pnlItems";
-            this.pnlItems.Size = new System.Drawing.Size(1109, 618);
+            this.pnlItems.Size = new System.Drawing.Size(1137, 618);
             this.pnlItems.TabIndex = 85;
-            // 
-            // vsbFG
-            // 
-            this.vsbFG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.vsbFG.Location = new System.Drawing.Point(1119, 0);
-            this.vsbFG.Margin = new System.Windows.Forms.Padding(4);
-            this.vsbFG.Name = "vsbFG";
-            this.vsbFG.Opacity = 1F;
-            this.vsbFG.Size = new System.Drawing.Size(89, 624);
-            this.vsbFG.TabIndex = 1;
             // 
             // btnBack
             // 
@@ -81,7 +81,7 @@
             this.btnBack.Appearance.Options.UseBackColor = true;
             this.btnBack.Appearance.Options.UseFont = true;
             this.btnBack.Appearance.Options.UseForeColor = true;
-            this.btnBack.Location = new System.Drawing.Point(6, 745);
+            this.btnBack.Location = new System.Drawing.Point(7, 753);
             this.btnBack.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnBack.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.btnBack.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -101,7 +101,7 @@
             this.btnNext.Appearance.Options.UseBackColor = true;
             this.btnNext.Appearance.Options.UseFont = true;
             this.btnNext.Appearance.Options.UseForeColor = true;
-            this.btnNext.Location = new System.Drawing.Point(993, 745);
+            this.btnNext.Location = new System.Drawing.Point(994, 753);
             this.btnNext.LookAndFeel.SkinName = "DevExpress Dark Style";
             this.btnNext.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.btnNext.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -110,7 +110,7 @@
             this.btnNext.Size = new System.Drawing.Size(222, 101);
             this.btnNext.TabIndex = 97;
             this.btnNext.Text = "Next";
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click_1);
             // 
             // labelControl13
             // 
@@ -123,12 +123,12 @@
             this.labelControl13.Appearance.Options.UseTextOptions = true;
             this.labelControl13.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl13.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl13.Location = new System.Drawing.Point(7, 5);
+            this.labelControl13.Location = new System.Drawing.Point(8, 13);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(1209, 100);
             this.labelControl13.TabIndex = 96;
-            this.labelControl13.Text = "Select Slurry Lot";
+            this.labelControl13.Text = "Select Slurry";
             // 
             // ucSlurryLots
             // 

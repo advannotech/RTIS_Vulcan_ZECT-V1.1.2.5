@@ -12,6 +12,7 @@ using System.Diagnostics;
 using RTIS_Vulcan_ZECT.Classes;
 using RTIS_Vulcan_ZECT.Controls.Open_Job;
 
+
 namespace RTIS_Vulcan_ZECT.Controls
 {
     public partial class ucSlurryLots : UserControl
@@ -29,12 +30,17 @@ namespace RTIS_Vulcan_ZECT.Controls
         public frmMain main;
         Panel parent;
 
+        System.Timers.Timer STimer;
+
         public ucSlurryLots(Panel _parent, frmMain _main)
         {
             InitializeComponent();
             parent = _parent;
             main = _main;
         }
+
+
+
 
         private void ucSlurryLots_Load(object sender, EventArgs e)
         {
@@ -125,21 +131,9 @@ namespace RTIS_Vulcan_ZECT.Controls
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                GlobalVars.lastControl = new ucSelectCoatSlurry(parent, main);
-                main.pnlMain.Controls.Clear();
-                main.pnlMain.Controls.Add(GlobalVars.lastControl);
-            }
-            catch (Exception ex)
-            {
-                ExHandler.showErrorEx(ex);
-            }
-        }
+      
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private void btnNext_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -178,5 +172,21 @@ namespace RTIS_Vulcan_ZECT.Controls
                 ExHandler.showErrorEx(ex);
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GlobalVars.lastControl = new ucSelectCoatSlurry(parent, main);
+                main.pnlMain.Controls.Clear();
+                main.pnlMain.Controls.Add(GlobalVars.lastControl);
+            }
+            catch (Exception ex)
+            {
+                ExHandler.showErrorEx(ex);
+            }
+        }
+
+
     }
 }

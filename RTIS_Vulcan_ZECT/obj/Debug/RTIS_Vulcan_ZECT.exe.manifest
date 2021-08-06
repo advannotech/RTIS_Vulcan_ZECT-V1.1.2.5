@@ -1831,14 +1831,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_ZECT.exe" size="1391648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_ZECT.exe" size="1392160">
       <assemblyIdentity name="RTIS_Vulcan_ZECT" version="1.1.2.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4S377adWzcx5KIDABiIzsNFbZwmfyYMhYtKTqTlkqjY=</dsig:DigestValue>
+        <dsig:DigestValue>QQadm3TX22jBLATyQtqcIHDgKpcRuC/uO2C1EnKe42c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
