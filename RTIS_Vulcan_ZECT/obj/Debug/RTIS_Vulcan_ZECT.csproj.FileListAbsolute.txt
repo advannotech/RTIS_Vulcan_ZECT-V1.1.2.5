@@ -1368,3 +1368,7 @@ C:\Users\advannotechdev1\source\repos\lifasibiya\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_
 C:\Users\advannotechdev1\source\repos\lifasibiya\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\bin\Debug\es\DevExpress.XtraVerticalGrid.v20.2.resources.dll
 C:\Users\advannotechdev1\source\repos\lifasibiya\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\bin\Debug\ja\DevExpress.XtraVerticalGrid.v20.2.resources.dll
 C:\Users\advannotechdev1\source\repos\lifasibiya\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\bin\Debug\ru\DevExpress.XtraVerticalGrid.v20.2.resources.dll
+C:\Users\advannotechdev1\source\repos\lifasibiya\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\bin\Debug\RTIS_Vulcan_ZECT.exe.manifest
+C:\Users\advannotechdev1\source\repos\lifasibiya\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\bin\Debug\RTIS_Vulcan_ZECT.application
+C:\Users\advannotechdev1\source\repos\lifasibiya\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\obj\Debug\RTIS_Vulcan_ZECT.exe.manifest
+C:\Users\advannotechdev1\source\repos\lifasibiya\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\obj\Debug\RTIS_Vulcan_ZECT.application

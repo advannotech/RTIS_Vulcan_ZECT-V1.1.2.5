@@ -1831,14 +1831,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_ZECT.exe" size="1392160">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RTIS_Vulcan_ZECT.exe" size="1395744">
       <assemblyIdentity name="RTIS_Vulcan_ZECT" version="1.1.2.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QQadm3TX22jBLATyQtqcIHDgKpcRuC/uO2C1EnKe42c=</dsig:DigestValue>
+        <dsig:DigestValue>+F5fYk2cy936U1BH5XThg2eARi4AtztngyiEvuumIZI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1899,13 +1899,13 @@
       <dsig:DigestValue>g+fc1S3eRQoAR5k1MDAUu4Q/wE5l5t25imLWI/RNyAk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="RTIS_Vulcan_ZECT.exe.config" size="433">
+  <file name="RTIS_Vulcan_ZECT.exe.config" size="597">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>AzqD4X/vv2BGm8iDfpJ67R6ewzLOClIv0nrVp3BF2Dc=</dsig:DigestValue>
+      <dsig:DigestValue>fXD8EsYh/POPoAAtcqozIhd6CE0U/NPT+vMQzCP7Yxg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SQLite.Interop.dll" size="1155584">
