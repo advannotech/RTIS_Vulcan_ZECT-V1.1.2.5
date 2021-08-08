@@ -92,11 +92,21 @@ namespace RTIS_Vulcan_ZECT.Controls
                     case "1":
                         lots = lots.Remove(0, 2);
                         string[] allLots = lots.Split('~');
+                        List<string> removeDuplicateLots = new List<string>();
+
                         foreach (string item in allLots)
                         {
                             if (item != string.Empty)
                             {
-                                cntrlSlurryLot PGM = new cntrlSlurryLot(item.Split('|')[0] + " : ", item.Split('|')[1], "Lot : " + item.Split('|')[2], item.Split('|')[3], item.Split('|')[4],  item.Split('|')[5], this);
+                                removeDuplicateLots.Add(item.Split('|')[2]); 
+                            }
+                        }
+
+                        foreach (string code in removeDuplicateLots.Distinct())
+                        {
+                            if (code != string.Empty)
+                            {
+                                cntrlSlurryLot PGM = new cntrlSlurryLot(string.Empty, string.Empty,"              "+ code,string.Empty,string.Empty, string.Empty, this);
                                 PGM.Dock = DockStyle.Top;
                                 pnlItems.Controls.Add(PGM);
                             }
@@ -187,6 +197,6 @@ namespace RTIS_Vulcan_ZECT.Controls
             }
         }
 
-
+     
     }
 }
