@@ -136,257 +136,112 @@ namespace RTIS_Vulcan_ZECT.Controls
 
         private void btnSecond_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateCoat("1st", "2nd"))
             {
-
-                SqlConnection conn = new SqlConnection(strcon);
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                conn.Open();
-                //cmd.CommandText = "SELECT [vCoat], COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE [vCatalystCode]=" + "'" + cCode + "' AND [vLotNumber]=" + "'" + lNum + "' GROUP BY [vCoat]";
-                cmd.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' GROUP BY vCoat";
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                dataReader.Read();
-                if (dataReader.HasRows == true)
+                try
                 {
-                    try
-                    {
-                        SqlConnection conn3 = new SqlConnection(strcon);
-                        SqlCommand cmd3 = new SqlCommand();
-                        cmd3.Connection = conn3;
-                        conn3.Open();
-                        cmd3.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' AND vCoat!='1st' GROUP BY vCoat";
-                        SqlDataReader dataReader1c = cmd3.ExecuteReader();
-                        dataReader1c.Read();
-
-                        SqlConnection conn2 = new SqlConnection(strcon);
-                        SqlCommand cmd2 = new SqlCommand();
-                        cmd2.Connection = conn2;
-                        conn2.Open();
-                        cmd2.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' AND vCoat='2nd' GROUP BY vCoat";
-                        SqlDataReader dataReader2 = cmd2.ExecuteReader();
-                        dataReader2.Read();
-
-                        if (dataReader2.HasRows == true)
-                        {
-                            msg = new frmMsg(lNum, "Lot number already used in second coat",
-                            GlobalVars.msgState.Info);
-                            msg.ShowDialog();
-                            btnSecond.Enabled = false;
-                        }
-                        else if (dataReader1c.HasRows == true)
-                        {
-                            msg = new frmMsg(lNum, "Lot number is missing in previous coat[s]",
-                            GlobalVars.msgState.Info);
-                            msg.ShowDialog();
-                            btnSecond.Enabled = false;
-                        }
-                        else
-                        {
-
-                            try
-                            {
-                                GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.second;
-                                ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
-                                main.pnlMain.Controls.Clear();
-                                main.pnlMain.Controls.Add(slurry);
-                            }
-                            catch (Exception ex)
-                            {
-                                ExHandler.showErrorEx(ex);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        ExHandler.showErrorEx(ex);
-                    }
-
-
+                    GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.second;
+                    ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
+                    main.pnlMain.Controls.Clear();
+                    main.pnlMain.Controls.Add(slurry);
                 }
-                else
+                catch (Exception ex)
                 {
-                    msg = new frmMsg(lNum,
-                            "Invalid lot number",
-                            GlobalVars.msgState.Info);
-                    msg.ShowDialog();
-
+                    ExHandler.showErrorEx(ex);
                 }
-            }
-            catch (Exception ex)
-            {
-                ExHandler.showErrorEx(ex);
             }
         }
 
         private void btnThird_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateCoat("2nd", "3rd"))
             {
-
-                SqlConnection conn = new SqlConnection(strcon);
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                conn.Open();
-                //cmd.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vCatalystCode=" + "'" + cCode + "' AND vLotNumber=" + "'" + lNum + "' GROUP BY vCoat";
-                cmd.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' GROUP BY vCoat";
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                dataReader.Read();
-                if (dataReader.HasRows == true)
+                try
                 {
-                    try
-                    {
-                        SqlConnection conn3 = new SqlConnection(strcon);
-                        SqlCommand cmd3 = new SqlCommand();
-                        cmd3.Connection = conn3;
-                        conn3.Open();
-                        cmd3.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' AND vCoat!='2nd' AND vCoat!='1st' GROUP BY vCoat";
-                        SqlDataReader dataReader1c2c = cmd3.ExecuteReader();
-                        dataReader1c2c.Read();
-
-                        SqlConnection conn2 = new SqlConnection(strcon);
-                        SqlCommand cmd2 = new SqlCommand();
-                        cmd2.Connection = conn2;
-                        conn2.Open();
-                        cmd2.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' AND vCoat='3rd' GROUP BY vCoat";
-                        SqlDataReader dataReader3c = cmd2.ExecuteReader();
-                        dataReader3c.Read();
-
-                        if (dataReader3c.HasRows == true)
-                        {
-                            msg = new frmMsg(lNum, "Lot number already used in third coat",
-                         GlobalVars.msgState.Info);
-                            msg.ShowDialog();
-                            btnThird.Enabled = false;
-                        }
-                        else if (dataReader1c2c.HasRows == true)
-                        {
-                            msg = new frmMsg(lNum, "Lot number is missing in previous coat[s]",
-                            GlobalVars.msgState.Info);
-                            msg.ShowDialog();
-                            btnThird.Enabled = false;
-                        }
-                        else
-                        {
-
-                            try
-                            {
-                                GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.third;
-                                ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
-                                main.pnlMain.Controls.Clear();
-                                main.pnlMain.Controls.Add(slurry);
-                            }
-                            catch (Exception ex)
-                            {
-                                ExHandler.showErrorEx(ex);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        ExHandler.showErrorEx(ex);
-                    }
-
-
+                    GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.third;
+                    ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
+                    main.pnlMain.Controls.Clear();
+                    main.pnlMain.Controls.Add(slurry);
                 }
-                else
+                catch (Exception ex)
                 {
-                    msg = new frmMsg(lNum,
-                            "Invalid lot number",
-                            GlobalVars.msgState.Info);
-                    msg.ShowDialog();
-
+                    ExHandler.showErrorEx(ex);
                 }
-            }
-            catch (Exception ex)
-            {
-                ExHandler.showErrorEx(ex);
             }
         }
 
         private void btnForth_Click(object sender, EventArgs e)
         {
+            if (ValidateCoat("3rd", "4th"))
+            {
+                try
+                {
+                    GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.forth;
+                    ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
+                    main.pnlMain.Controls.Clear();
+                    main.pnlMain.Controls.Add(slurry);
+                }
+                catch (Exception ex)
+                {
+                    ExHandler.showErrorEx(ex);
+                }
+            }
+        }
+
+        private bool ValidateCoat(string previous, string current)
+        {
             try
             {
-
                 SqlConnection conn = new SqlConnection(strcon);
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 conn.Open();
-                //cmd.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vCatalystCode=" + "'" + cCode + "' AND vLotNumber=" + "'" + lNum + "' GROUP BY vCoat";
-                cmd.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' GROUP BY vCoat";
+                cmd.CommandText = "SELECT vCoat FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' GROUP BY vCoat";
                 SqlDataReader dataReader = cmd.ExecuteReader();
-                dataReader.Read();
-                if (dataReader.HasRows == true)
+
+                List<string> coats = new List<string>();
+
+                if (dataReader.HasRows)
                 {
-                    try
+                    while (dataReader.Read())
                     {
-                        SqlConnection conn4 = new SqlConnection(strcon);
-                        SqlCommand cmd4 = new SqlCommand();
-                        cmd4.Connection = conn4;
-                        conn4.Open();
-                        cmd4.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM tbl_RTIS_Zect_Jobs WHERE vLotNumber=" + "'" + lNum + "' AND vCoat!='3rd' AND vCoat!='2nd' AND vCoat!='1st' GROUP BY vCoat";
-                        SqlDataReader dataReader1c2c3c = cmd4.ExecuteReader();
-                        dataReader1c2c3c.Read();
+                        coats.Add(dataReader.GetString(0));
+                    }
 
-                        SqlConnection conn2 = new SqlConnection(strcon);
-                        SqlCommand cmd2 = new SqlCommand();
-                        cmd2.Connection = conn2;
-                        conn2.Open();
-                        cmd2.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' AND vCoat='4th' GROUP BY vCoat";
-                        SqlDataReader dataReader4c = cmd2.ExecuteReader();
-                        dataReader4c.Read();
-
-                        if (dataReader4c.HasRows == true)
+                    if (coats.Contains(previous))
+                    {
+                        if (!coats.Contains(current))
                         {
-                            msg = new frmMsg(lNum, "Lot number already used in fourth coat",
-                         GlobalVars.msgState.Info);
-                            msg.ShowDialog();
-                            btnForth.Enabled = false;
-                        }
-                        else if (dataReader1c2c3c.HasRows == true)
-                        {
-                            msg = new frmMsg(lNum, "Lot number is missing in previous coat[s]",
-                            GlobalVars.msgState.Info);
-                            msg.ShowDialog();
-                            btnForth.Enabled = false;
+                            return true;
                         }
                         else
                         {
-
-                            try
-                            {
-                                GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.forth;
-                                ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
-                                main.pnlMain.Controls.Clear();
-                                main.pnlMain.Controls.Add(slurry);
-                            }
-                            catch (Exception ex)
-                            {
-                                ExHandler.showErrorEx(ex);
-                            }
+                            msg = new frmMsg(lNum, $"Lot number already exist on {current} coat",
+                            GlobalVars.msgState.Info);
+                            msg.ShowDialog();
                         }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        ExHandler.showErrorEx(ex);
+                        msg = new frmMsg(lNum, "Lot number is missing in previous coat",
+                        GlobalVars.msgState.Info);
+                        msg.ShowDialog();
                     }
-
-
                 }
                 else
                 {
-                    msg = new frmMsg(lNum,
-                            "Invalid lot number",
-                            GlobalVars.msgState.Info);
+                    msg = new frmMsg(lNum, "Lot number is missing in previous coat",
+                    GlobalVars.msgState.Info);
                     msg.ShowDialog();
-
                 }
             }
             catch (Exception ex)
             {
                 ExHandler.showErrorEx(ex);
             }
+
+            return false;
+
         }
 
         private void btnLogoff_Click(object sender, EventArgs e)
