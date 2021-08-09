@@ -223,14 +223,14 @@ namespace RTIS_Vulcan_ZECT.Controls
                     }
                     else
                     {
-                        msg = new frmMsg(lNum, "Lot number is missing in previous coat",
+                        msg = new frmMsg(lNum, "Lot number is missing on previous coat",
                         GlobalVars.msgState.Info);
                         msg.ShowDialog();
                     }
                 }
                 else
                 {
-                    msg = new frmMsg(lNum, "Lot number is missing in previous coat",
+                    msg = new frmMsg(lNum, "Lot number is missing on previous coat",
                     GlobalVars.msgState.Info);
                     msg.ShowDialog();
                 }
