@@ -153,28 +153,27 @@ namespace RTIS_Vulcan_ZECT.Controls
                                                     string description3 = labelInfo.Split('|')[6];
                                                     string group = labelInfo.Split('|')[7];
 
-                                                    //TODO
-                                                    //XtraReport printLabel = GlobalVars.configTag;
-                                                    //printLabel.Parameters["_Lot"].Value = GlobalVars.ROLotNumber;
-                                                    //printLabel.Parameters["_Qty"].Value = lblJobQty.Text;
-                                                    //printLabel.Parameters["_Coat"].Value = GlobalVars.ROcoat;
-                                                    //printLabel.Parameters["_Slurry"].Value = "Reprint";
-                                                    //printLabel.Parameters["_SlurryLot"].Value = "Reprint";
-                                                    //printLabel.Parameters["_RT2D"].Value = GlobalVars.ROjobNo;
-                                                    //printLabel.Parameters["_ItemCode"].Value = itemCode;
-                                                    //printLabel.Parameters["_barcode"].Value = barcode;
-                                                    //printLabel.Parameters["_bin"].Value = binLocation;
-                                                    //printLabel.Parameters["_Date"].Value = DateTime.Now.ToString("yyyy-MM-dd");
-                                                    //printLabel.Parameters["_Description1"].Value = description1;
-                                                    //printLabel.Parameters["_Description2"].Value = description2;
-                                                    //printLabel.Parameters["_Description3"].Value = description3;
-                                                    //printLabel.Parameters["_Group"].Value = group;
-                                                    //printLabel.Parameters["_SimpleCode"].Value = simpleCode;
-                                                    //printLabel.CreateDocument();
-                                                    
-                                                    //ReportPrintTool prtTool = new ReportPrintTool(printLabel);
-                                                    //prtTool.PrinterSettings.Copies = Convert.ToInt16(2);
-                                                    //prtTool.Print(GlobalVars.Printer);
+                                                    XtraReport printLabel = GlobalVars.configTag;
+                                                    printLabel.Parameters["_Lot"].Value = GlobalVars.ROLotNumber;
+                                                    printLabel.Parameters["_Qty"].Value = lblJobQty.Text;
+                                                    printLabel.Parameters["_Coat"].Value = GlobalVars.ROcoat;
+                                                    printLabel.Parameters["_Slurry"].Value = "Reprint";
+                                                    printLabel.Parameters["_SlurryLot"].Value = "Reprint";
+                                                    printLabel.Parameters["_RT2D"].Value = GlobalVars.ROjobNo;
+                                                    printLabel.Parameters["_ItemCode"].Value = itemCode;
+                                                    printLabel.Parameters["_barcode"].Value = barcode;
+                                                    printLabel.Parameters["_bin"].Value = binLocation;
+                                                    printLabel.Parameters["_Date"].Value = DateTime.Now.ToString("yyyy-MM-dd");
+                                                    printLabel.Parameters["_Description1"].Value = description1;
+                                                    printLabel.Parameters["_Description2"].Value = description2;
+                                                    printLabel.Parameters["_Description3"].Value = description3;
+                                                    printLabel.Parameters["_Group"].Value = group;
+                                                    printLabel.Parameters["_SimpleCode"].Value = simpleCode;
+                                                    printLabel.CreateDocument();
+
+                                                    ReportPrintTool prtTool = new ReportPrintTool(printLabel);
+                                                    prtTool.PrinterSettings.Copies = Convert.ToInt16(2);
+                                                    prtTool.Print(GlobalVars.Printer);
 
                                                     msg = new frmMsg("Success", "The job has been opened", GlobalVars.msgState.Success);
                                                     msg.ShowDialog();

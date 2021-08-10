@@ -70,9 +70,13 @@
             this.pbxBattery.EditValue = ((object)(resources.GetObject("pbxBattery.EditValue")));
             this.pbxBattery.Location = new System.Drawing.Point(1349, 12);
             this.pbxBattery.Name = "pbxBattery";
+            // 
+            // 
+            // 
             this.pbxBattery.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pbxBattery.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pbxBattery.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pbxBattery.Properties.ZoomAccelerationFactor = 1D;
             this.pbxBattery.Size = new System.Drawing.Size(102, 56);
             this.pbxBattery.TabIndex = 85;
             // 
@@ -179,8 +183,8 @@
             this.btnSettings.Appearance.BackColor2 = System.Drawing.Color.White;
             this.btnSettings.Appearance.Options.UseBackColor = true;
             this.btnSettings.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.btnSettings.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.ImageOptions.Image")));
-            this.btnSettings.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSettings.Location = new System.Drawing.Point(1464, 13);
             this.btnSettings.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnSettings.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -197,9 +201,13 @@
             this.pictureEdit2.Location = new System.Drawing.Point(12, 5);
             this.pictureEdit2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit2.Name = "pictureEdit2";
+            // 
+            // 
+            // 
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit2.Properties.ZoomAccelerationFactor = 1D;
             this.pictureEdit2.Size = new System.Drawing.Size(320, 100);
             this.pictureEdit2.TabIndex = 77;
             // 
