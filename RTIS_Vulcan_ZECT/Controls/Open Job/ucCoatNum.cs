@@ -50,72 +50,7 @@ namespace RTIS_Vulcan_ZECT.Controls
         }
         private void btnfirst_Click(object sender, EventArgs e)
         {
-            //try
-            //{
 
-            //    SqlConnection conn = new SqlConnection(strcon);
-            //    SqlCommand cmd = new SqlCommand();
-            //    cmd.Connection = conn;
-            //    conn.Open();
-            //    cmd.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' GROUP BY vCoat";
-            //    SqlDataReader dataReader = cmd.ExecuteReader();
-            //    dataReader.Read();
-            //    if (dataReader.HasRows == true)
-            //    {
-            //        try
-            //        {
-
-            //            SqlConnection conn2 = new SqlConnection(strcon);
-            //            SqlCommand cmd2 = new SqlCommand();
-            //            cmd2.Connection = conn2;
-            //            conn2.Open();
-            //            cmd2.CommandText = "SELECT vCoat, COUNT(vCoat) AS 'Coat' FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' AND vCoat='1st' GROUP BY vCoat";
-            //            SqlDataReader dataReader2 = cmd2.ExecuteReader();
-            //            dataReader2.Read();
-
-            //            if (dataReader2.HasRows == true)
-            //            {
-            //                msg = new frmMsg(lNum, "Lot number already used in first coat",
-            //             GlobalVars.msgState.Info);
-            //                msg.ShowDialog();
-            //                btnfirst.Enabled = false;
-            //            }
-
-            //            else
-            //            {
-
-            //                try
-            //                {
-            //                    GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.first;
-            //                    ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
-            //                    main.pnlMain.Controls.Clear();
-            //                    main.pnlMain.Controls.Add(slurry);
-            //                }
-            //                catch (Exception ex)
-            //                {
-            //                    ExHandler.showErrorEx(ex);
-            //                }
-            //            }
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            ExHandler.showErrorEx(ex);
-            //        }
-
-            //   }
-            //    else
-            //    {
-            //        msg = new frmMsg(lNum,
-            //                "Invalid lot number",
-            //                GlobalVars.msgState.Info);
-            //        msg.ShowDialog();
-
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    ExHandler.showErrorEx(ex);
-            //}
             try
             {
                 GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.first;
