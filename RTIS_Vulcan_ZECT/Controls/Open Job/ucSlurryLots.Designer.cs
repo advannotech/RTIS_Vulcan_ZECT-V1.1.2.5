@@ -129,6 +129,7 @@
             this.labelControl13.Size = new System.Drawing.Size(1209, 100);
             this.labelControl13.TabIndex = 96;
             this.labelControl13.Text = "Select Slurry";
+            this.labelControl13.Click += new System.EventHandler(this.labelControl13_Click);
             // 
             // ucSlurryLots
             // 

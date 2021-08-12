@@ -91,26 +91,64 @@ namespace RTIS_Vulcan_ZECT.Controls
                 {
                     case "1":
                         lots = lots.Remove(0, 2);
+
                         string[] allLots = lots.Split('~');
+                        var slurryInfo = new SlurryInfo();
+                        List<SlurryInfo> slurry = new List<SlurryInfo>().ToList();
                         List<string> removeDuplicateLots = new List<string>();
 
-                        foreach (string item in allLots)
+                  
+
+                        foreach (string item in allLots.Distinct())
                         {
                             if (item != string.Empty)
                             {
-                                removeDuplicateLots.Add(item.Split('|')[2]); 
-                            }
-                        }
-
-                        foreach (string code in removeDuplicateLots.Distinct())
-                        {
-                            if (code != string.Empty)
-                            {
-                                cntrlSlurryLot PGM = new cntrlSlurryLot(string.Empty, string.Empty,"              "+ code,string.Empty,string.Empty, string.Empty, this);
+                                cntrlSlurryLot PGM = new cntrlSlurryLot(item.Split('|')[0], item.Split('|')[1], item.Split('|')[2], item.Split('|')[3], item.Split('|')[4], item.Split('|')[5], this);
                                 PGM.Dock = DockStyle.Top;
                                 pnlItems.Controls.Add(PGM);
                             }
                         }
+
+
+                        //foreach (string code in removeDuplicateLots.Distinct())
+                        //{
+
+                        //    if (code != string.Empty)
+                        //    {
+                        //        cntrlSlurryLot PGM = new cntrlSlurryLot(string.Empty, string.Empty, code, string.Empty, string.Empty, string.Empty, this);
+                        //        PGM.Dock = DockStyle.Top;
+                        //        pnlItems.Controls.Add(PGM);
+                        //    }
+                        //}
+                
+  
+                       
+                        //foreach (string l in allLots.Distinct())
+                        //{
+                        //    if (l != string.Empty)
+                        //    {
+                        //        SlurryInfo clientResponse = new SlurryInfo
+                        //        {
+                        //            tankType = l.Split('|')[0],
+                        //            tankcode = l.Split('|')[1],
+                        //            lot = l.Split('|')[2],
+                        //            typecode = l.Split('|')[3],
+                        //            wetWeight = l.Split('|')[4],
+                        //            dryWeight = l.Split('|')[5]
+                        //        };
+
+                        //        slurry.Add(clientResponse);
+                        //        cntrlSlurryLot PGM = new cntrlSlurryLot(clientResponse.tankType, clientResponse.tankcode, clientResponse.lot, clientResponse.typecode, clientResponse.wetWeight, clientResponse.dryWeight, this);
+                        //        PGM.Dock = DockStyle.Top;
+                        //        pnlItems.Controls.Add(PGM); removeDuplicateLots.Add(l.Split('|')[2]);
+
+
+                        //    }
+                        //}
+
+
+
+
                         break;
                     case "0":
                         lots = lots.Remove(0, 2);
@@ -141,7 +179,16 @@ namespace RTIS_Vulcan_ZECT.Controls
             }
         }
 
-      
+        public class SlurryInfo
+        {
+            public string tankType { get; set; }
+            public string tankcode { get; set; }
+            public string lot { get; set; }
+            public string typecode { get; set; }
+            public string wetWeight { get; set; }
+            public string dryWeight { get; set; }
+
+        }
 
         private void btnNext_Click_1(object sender, EventArgs e)
         {
@@ -197,6 +244,9 @@ namespace RTIS_Vulcan_ZECT.Controls
             }
         }
 
-     
+        private void labelControl13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

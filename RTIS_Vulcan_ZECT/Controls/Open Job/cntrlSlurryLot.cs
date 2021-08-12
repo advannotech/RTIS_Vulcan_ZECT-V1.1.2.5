@@ -33,9 +33,10 @@ namespace RTIS_Vulcan_ZECT.Controls
         }
         private void cntrlSlurryLot_Load(object sender, EventArgs e)
         {
-            lblTankType.Text = tankType;
-            lblTankCode.Text = tankcode;
-            lblLot.Text = code;
+           lblLot.Text = code;
+           lblTankType.Text = dryWeight +" kg";
+           //lblTankCode.Text = tankcode;
+            
         }
         private void lblLot_Click(object sender, EventArgs e)
         {

@@ -58,12 +58,12 @@
             this.lblTankCode.Appearance.Options.UseFont = true;
             this.lblTankCode.Appearance.Options.UseForeColor = true;
             this.lblTankCode.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTankCode.Location = new System.Drawing.Point(421, 5);
+            this.lblTankCode.Location = new System.Drawing.Point(556, 3);
             this.lblTankCode.Margin = new System.Windows.Forms.Padding(4);
             this.lblTankCode.Name = "lblTankCode";
-            this.lblTankCode.Size = new System.Drawing.Size(241, 140);
+            this.lblTankCode.Size = new System.Drawing.Size(190, 146);
             this.lblTankCode.TabIndex = 86;
-            this.lblTankCode.Text = "[Tank Code]";
+            this.lblTankCode.Text = "Dry Wt:";
             this.lblTankCode.Click += new System.EventHandler(this.lblTankCode_Click);
             // 
             // lblTankType
@@ -75,12 +75,12 @@
             this.lblTankType.Appearance.Options.UseFont = true;
             this.lblTankType.Appearance.Options.UseForeColor = true;
             this.lblTankType.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTankType.Location = new System.Drawing.Point(63, 5);
+            this.lblTankType.Location = new System.Drawing.Point(747, 3);
             this.lblTankType.Margin = new System.Windows.Forms.Padding(4);
             this.lblTankType.Name = "lblTankType";
             this.lblTankType.Size = new System.Drawing.Size(329, 140);
             this.lblTankType.TabIndex = 85;
-            this.lblTankType.Text = "[Tank Type]";
+            this.lblTankType.Text = "[Dry Weight]";
             this.lblTankType.Click += new System.EventHandler(this.lblTankType_Click);
             // 
             // lblLot
@@ -94,10 +94,10 @@
             this.lblLot.Appearance.Options.UseFont = true;
             this.lblLot.Appearance.Options.UseForeColor = true;
             this.lblLot.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblLot.Location = new System.Drawing.Point(703, 5);
+            this.lblLot.Location = new System.Drawing.Point(15, 5);
             this.lblLot.Margin = new System.Windows.Forms.Padding(4);
             this.lblLot.Name = "lblLot";
-            this.lblLot.Size = new System.Drawing.Size(373, 140);
+            this.lblLot.Size = new System.Drawing.Size(577, 140);
             this.lblLot.TabIndex = 84;
             this.lblLot.Text = "[Lot]";
             this.lblLot.Click += new System.EventHandler(this.lblLot_Click);
@@ -119,8 +119,8 @@
         #endregion
 
         public System.Windows.Forms.Panel pnlBack;
-        public DevExpress.XtraEditors.LabelControl lblLot;
         public DevExpress.XtraEditors.LabelControl lblTankType;
         public DevExpress.XtraEditors.LabelControl lblTankCode;
+        public DevExpress.XtraEditors.LabelControl lblLot;
     }
 }
