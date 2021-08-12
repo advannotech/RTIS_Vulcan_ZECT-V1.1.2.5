@@ -6,15 +6,24 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Diagnostics;
 using RTIS_Vulcan_ZECT.Forms;
 using RTIS_Vulcan_ZECT.Classes;
+using System.Configuration;
 
 namespace RTIS_Vulcan_ZECT.Controls
 {
+
     public partial class ucCoatNum : UserControl
     {
+
+
+        string cCode = GlobalVars.OJCheckSheet;
+        string lNum = GlobalVars.OJLotNumber;
+
+        string strcon = ConfigurationManager.ConnectionStrings["cataConnectionString"].ConnectionString.ToString();
         #region Error handling
         public frmMsg msg;
         public string errMsg;
@@ -41,6 +50,7 @@ namespace RTIS_Vulcan_ZECT.Controls
         }
         private void btnfirst_Click(object sender, EventArgs e)
         {
+
             try
             {
                 GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.first;
@@ -54,49 +64,119 @@ namespace RTIS_Vulcan_ZECT.Controls
             }
         }
 
+        public bool ShowButton()
+        {
+            return true;
+        }
+
         private void btnSecond_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateCoat("1st", "2nd"))
             {
-                GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.second;
-                ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
-                main.pnlMain.Controls.Clear();
-                main.pnlMain.Controls.Add(slurry);
-            }
-            catch (Exception ex)
-            {
-                ExHandler.showErrorEx(ex);
+                try
+                {
+                    GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.second;
+                    ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
+                    main.pnlMain.Controls.Clear();
+                    main.pnlMain.Controls.Add(slurry);
+                }
+                catch (Exception ex)
+                {
+                    ExHandler.showErrorEx(ex);
+                }
             }
         }
 
         private void btnThird_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateCoat("2nd", "3rd"))
             {
-                GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.third;
-                ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
-                main.pnlMain.Controls.Clear();
-                main.pnlMain.Controls.Add(slurry);
-            }
-            catch (Exception ex)
-            {
-                ExHandler.showErrorEx(ex);
+                try
+                {
+                    GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.third;
+                    ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
+                    main.pnlMain.Controls.Clear();
+                    main.pnlMain.Controls.Add(slurry);
+                }
+                catch (Exception ex)
+                {
+                    ExHandler.showErrorEx(ex);
+                }
             }
         }
 
         private void btnForth_Click(object sender, EventArgs e)
         {
+            if (ValidateCoat("3rd", "4th"))
+            {
+                try
+                {
+                    GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.forth;
+                    ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
+                    main.pnlMain.Controls.Clear();
+                    main.pnlMain.Controls.Add(slurry);
+                }
+                catch (Exception ex)
+                {
+                    ExHandler.showErrorEx(ex);
+                }
+            }
+        }
+
+        private bool ValidateCoat(string previous, string current)
+        {
             try
             {
-                GlobalVars.OJCoatNumber = GlobalVars.CoatNumber.forth;
-                ucSelectCoatSlurry slurry = new ucSelectCoatSlurry(parent, main);
-                main.pnlMain.Controls.Clear();
-                main.pnlMain.Controls.Add(slurry);
+                SqlConnection conn = new SqlConnection(strcon);
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                conn.Open();
+                cmd.CommandText = "SELECT vCoat FROM [tbl_RTIS_Zect_Jobs] WHERE vLotNumber=" + "'" + lNum + "' GROUP BY vCoat";
+                SqlDataReader dataReader = cmd.ExecuteReader();
+
+                List<string> coats = new List<string>();
+
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        coats.Add(dataReader.GetString(0));
+                    }
+
+                    if (coats.Contains(previous))
+                    {
+                        if (!coats.Contains(current))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            msg = new frmMsg(lNum, $"Lot number already exist on {current} coat",
+                            GlobalVars.msgState.Info);
+                            msg.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        msg = new frmMsg(lNum, "Lot number is missing on previous coat",
+                        GlobalVars.msgState.Info);
+                        msg.ShowDialog();
+                    }
+                }
+                else
+                {
+                    msg = new frmMsg(lNum, "Lot number is missing on previous coat",
+                    GlobalVars.msgState.Info);
+                    msg.ShowDialog();
+                }
             }
             catch (Exception ex)
             {
                 ExHandler.showErrorEx(ex);
             }
+
+            return false;
+
         }
 
         private void btnLogoff_Click(object sender, EventArgs e)

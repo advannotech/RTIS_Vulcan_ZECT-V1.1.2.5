@@ -1037,7 +1037,7 @@ namespace RTIS_Vulcan_ZECT.Classes
             }
         }
         #endregion
-
+       
         #region Re Open Job
         public static string checkJobOnLine(string jobTag)
         {

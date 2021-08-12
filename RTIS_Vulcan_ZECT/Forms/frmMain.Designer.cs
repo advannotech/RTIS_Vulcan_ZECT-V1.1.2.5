@@ -55,10 +55,9 @@
             // 
             this.pbXWifi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbXWifi.Image = global::RTIS_Vulcan_ZECT.Properties.Resources.notfound2;
-            this.pbXWifi.Location = new System.Drawing.Point(1274, 15);
-            this.pbXWifi.Margin = new System.Windows.Forms.Padding(4);
+            this.pbXWifi.Location = new System.Drawing.Point(956, 12);
             this.pbXWifi.Name = "pbXWifi";
-            this.pbXWifi.Size = new System.Drawing.Size(60, 53);
+            this.pbXWifi.Size = new System.Drawing.Size(45, 43);
             this.pbXWifi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbXWifi.TabIndex = 76;
             this.pbXWifi.TabStop = false;
@@ -68,7 +67,8 @@
             this.pbxBattery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxBattery.Cursor = System.Windows.Forms.Cursors.Default;
             this.pbxBattery.EditValue = ((object)(resources.GetObject("pbxBattery.EditValue")));
-            this.pbxBattery.Location = new System.Drawing.Point(1349, 12);
+            this.pbxBattery.Location = new System.Drawing.Point(1012, 10);
+            this.pbxBattery.Margin = new System.Windows.Forms.Padding(2);
             this.pbxBattery.Name = "pbxBattery";
             // 
             // 
@@ -92,10 +92,9 @@
             this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl5.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.Location = new System.Drawing.Point(340, 13);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Location = new System.Drawing.Point(255, 11);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(104, 92);
+            this.labelControl5.Size = new System.Drawing.Size(78, 75);
             this.labelControl5.TabIndex = 84;
             this.labelControl5.Text = "ZECT Application";
             // 
@@ -107,10 +106,9 @@
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.Location = new System.Drawing.Point(754, 74);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Location = new System.Drawing.Point(566, 60);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(207, 53);
+            this.labelControl4.Size = new System.Drawing.Size(155, 43);
             this.labelControl4.TabIndex = 83;
             this.labelControl4.Text = "Username:";
             // 
@@ -122,10 +120,9 @@
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.Location = new System.Drawing.Point(754, 13);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(566, 11);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(207, 53);
+            this.labelControl3.Size = new System.Drawing.Size(155, 43);
             this.labelControl3.TabIndex = 82;
             this.labelControl3.Text = "Version:";
             // 
@@ -137,10 +134,9 @@
             this.lblUsername.Appearance.Options.UseFont = true;
             this.lblUsername.Appearance.Options.UseForeColor = true;
             this.lblUsername.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblUsername.Location = new System.Drawing.Point(969, 69);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.lblUsername.Location = new System.Drawing.Point(727, 56);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(234, 58);
+            this.lblUsername.Size = new System.Drawing.Size(176, 47);
             this.lblUsername.TabIndex = 81;
             this.lblUsername.Text = "[Username]";
             // 
@@ -152,10 +148,9 @@
             this.lblVersion.Appearance.Options.UseFont = true;
             this.lblVersion.Appearance.Options.UseForeColor = true;
             this.lblVersion.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblVersion.Location = new System.Drawing.Point(969, 11);
-            this.lblVersion.Margin = new System.Windows.Forms.Padding(4);
+            this.lblVersion.Location = new System.Drawing.Point(727, 9);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(234, 55);
+            this.lblVersion.Size = new System.Drawing.Size(176, 45);
             this.lblVersion.TabIndex = 80;
             this.lblVersion.Text = "[Vesrion]";
             // 
@@ -169,10 +164,9 @@
             this.lblDT.Appearance.Options.UseTextOptions = true;
             this.lblDT.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblDT.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblDT.Location = new System.Drawing.Point(1249, 76);
-            this.lblDT.Margin = new System.Windows.Forms.Padding(4);
+            this.lblDT.Location = new System.Drawing.Point(937, 62);
             this.lblDT.Name = "lblDT";
-            this.lblDT.Size = new System.Drawing.Size(286, 44);
+            this.lblDT.Size = new System.Drawing.Size(214, 36);
             this.lblDT.TabIndex = 79;
             this.lblDT.Text = "00/00/00 00:00";
             // 
@@ -188,9 +182,8 @@
             this.btnSettings.Location = new System.Drawing.Point(1464, 13);
             this.btnSettings.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnSettings.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(4);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(69, 53);
+            this.btnSettings.Size = new System.Drawing.Size(52, 43);
             this.btnSettings.TabIndex = 78;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
@@ -198,8 +191,7 @@
             // 
             this.pictureEdit2.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit2.EditValue = global::RTIS_Vulcan_ZECT.Properties.Resources.CAT_SCAN_LOGO_300dpi_TRANSPARENT;
-            this.pictureEdit2.Location = new System.Drawing.Point(12, 5);
-            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureEdit2.Location = new System.Drawing.Point(9, 4);
             this.pictureEdit2.Name = "pictureEdit2";
             // 
             // 
@@ -216,27 +208,30 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel3.Location = new System.Drawing.Point(12, 134);
+            this.panel3.Location = new System.Drawing.Point(9, 109);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1523, 3);
+            this.panel3.Size = new System.Drawing.Size(1142, 2);
             this.panel3.TabIndex = 86;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.Location = new System.Drawing.Point(745, 13);
+            this.panel2.Location = new System.Drawing.Point(559, 11);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(3, 122);
+            this.panel2.Size = new System.Drawing.Size(2, 99);
             this.panel2.TabIndex = 88;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Location = new System.Drawing.Point(1239, 13);
+            this.panel1.Location = new System.Drawing.Point(929, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3, 122);
+            this.panel1.Size = new System.Drawing.Size(2, 99);
             this.panel1.TabIndex = 87;
             // 
             // pnlMain
@@ -244,9 +239,10 @@
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMain.Location = new System.Drawing.Point(12, 149);
+            this.pnlMain.Location = new System.Drawing.Point(9, 121);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1523, 639);
+            this.pnlMain.Size = new System.Drawing.Size(1142, 519);
             this.pnlMain.TabIndex = 89;
             // 
             // tmrBat
@@ -259,10 +255,10 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1547, 800);
+            this.ClientSize = new System.Drawing.Size(1155, 650);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -279,6 +275,7 @@
             this.Controls.Add(this.pictureEdit2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain";
