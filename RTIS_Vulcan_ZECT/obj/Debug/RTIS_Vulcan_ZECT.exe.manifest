@@ -1838,7 +1838,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< Updated upstream
         <dsig:DigestValue>N92RhD3hy5bNjrXL9Hl58SrOG53Fk8JdhFciKejSpT8=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>glH9m29nyZkNL31Awu1EIjbWMM0H65I9xegWbaiSTg4=</dsig:DigestValue>
+>>>>>>> Stashed changes
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1905,7 +1909,11 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< Updated upstream
       <dsig:DigestValue>YWeE+4zuL+xbXNXaiFfdrBlBR0+geck6UQJevjn7/wY=</dsig:DigestValue>
+=======
+      <dsig:DigestValue>ublDIU7t0d1luGXQxAmZq8ibdbkDhm4vxjmd+ckTaYA=</dsig:DigestValue>
+>>>>>>> Stashed changes
     </hash>
   </file>
   <file name="SQLite.Interop.dll" size="1155584">
