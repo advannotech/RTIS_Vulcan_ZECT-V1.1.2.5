@@ -1838,11 +1838,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< Updated upstream
-        <dsig:DigestValue>N92RhD3hy5bNjrXL9Hl58SrOG53Fk8JdhFciKejSpT8=</dsig:DigestValue>
-=======
-        <dsig:DigestValue>glH9m29nyZkNL31Awu1EIjbWMM0H65I9xegWbaiSTg4=</dsig:DigestValue>
->>>>>>> Stashed changes
+        <dsig:DigestValue>xddRaG3UqVF0XRszbonykB6ymUYMovlS+rwfIXDKzbo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1903,17 +1899,13 @@
       <dsig:DigestValue>g+fc1S3eRQoAR5k1MDAUu4Q/wE5l5t25imLWI/RNyAk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="RTIS_Vulcan_ZECT.exe.config" size="607">
+  <file name="RTIS_Vulcan_ZECT.exe.config" size="602">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< Updated upstream
-      <dsig:DigestValue>YWeE+4zuL+xbXNXaiFfdrBlBR0+geck6UQJevjn7/wY=</dsig:DigestValue>
-=======
       <dsig:DigestValue>ublDIU7t0d1luGXQxAmZq8ibdbkDhm4vxjmd+ckTaYA=</dsig:DigestValue>
->>>>>>> Stashed changes
     </hash>
   </file>
   <file name="SQLite.Interop.dll" size="1155584">
