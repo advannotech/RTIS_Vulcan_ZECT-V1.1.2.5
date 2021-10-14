@@ -1612,4 +1612,3 @@ C:\Users\advannotechdev1\source\repos\cataler\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vul
 C:\Users\advannotechdev1\source\repos\cataler\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\obj\Debug\RTIS_Vulcan_ZECT.csproj.CopyComplete
 C:\Users\advannotechdev1\source\repos\cataler\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\obj\Debug\RTIS_Vulcan_ZECT.exe
 C:\Users\advannotechdev1\source\repos\cataler\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\obj\Debug\RTIS_Vulcan_ZECT.pdb
-C:\Users\advannotechdev1\source\repos\cataler\RTIS_Vulcan_ZECT-V1.1.2.5\RTIS_Vulcan_ZECT\obj\Debug\RTIS_Vulcan_ZECT.csprojAssemblyReference.cache
