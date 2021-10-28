@@ -28,15 +28,17 @@
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Data.Desktop.v20.2\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.Data.Desktop.v20.2.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\UIAutomationClient\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationClient.dll" />
+///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\UIAutomationTypes\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationTypes.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Data.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Data.Linq.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Utils.v20.2.UI\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.Utils.v20.2.UI.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraTreeList.v20.2\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.XtraTreeList.v20.2.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraLayout.v20.2\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.XtraLayout.v20.2.dll" />
-///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraVerticalGrid.v20.2\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.XtraVerticalGrid.v20.2.dll" />
+///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraRichEdit.v20.2\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.XtraRichEdit.v20.2.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraPrinting.v20.2\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.XtraPrinting.v20.2.dll" />
-///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.DataAccess.v20.2.UI\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.DataAccess.v20.2.UI.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraGrid.v20.2\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.XtraGrid.v20.2.dll" />
+///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraVerticalGrid.v20.2\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.XtraVerticalGrid.v20.2.dll" />
+///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.DataAccess.v20.2.UI\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.DataAccess.v20.2.UI.dll" />
 ///     <Reference Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraCharts.v20.2.Wizard\v4.0_20.2.7.0__b88d1754d700e49a\DevExpress.XtraCharts.v20.2.Wizard.dll" />
 ///     <Reference Path="C:\Users\advannotechdev1\source\repos\cataler\UI\bin\Debug\System.Data.SQLite.dll" />
 ///   </References>
@@ -48,21 +50,24 @@
 namespace XtraReportSerialization {
     
     public class prntZectConfig : DevExpress.XtraReports.UI.XtraReport {
-        private DevExpress.XtraReports.Parameters.Parameter _Qty;
-        private DevExpress.XtraReports.Parameters.Parameter _Slurry;
-        private DevExpress.XtraReports.Parameters.Parameter _SlurryLot;
         private DevExpress.XtraReports.Parameters.Parameter _Description3;
-        private DevExpress.XtraReports.Parameters.Parameter _RT2D;
-        private DevExpress.XtraReports.Parameters.Parameter _barcode;
-        private DevExpress.XtraReports.Parameters.Parameter _Description2;
-        private DevExpress.XtraReports.Parameters.Parameter _Description1;
-        private DevExpress.XtraReports.Parameters.Parameter _ZectLine;
         private DevExpress.XtraReports.Parameters.Parameter _Group;
+        private DevExpress.XtraReports.Parameters.Parameter _RT2D;
+        private DevExpress.XtraReports.Parameters.Parameter _Description2;
+        private DevExpress.XtraReports.Parameters.Parameter _Coat;
+        private DevExpress.XtraReports.Parameters.Parameter _SlurryLot;
+        private DevExpress.XtraReports.Parameters.Parameter _Description1;
         private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRLabel label11;
+        private DevExpress.XtraReports.UI.XRLabel label13;
+        private DevExpress.XtraReports.UI.XRLine line3;
+        private DevExpress.XtraReports.UI.XRLine line5;
+        private DevExpress.XtraReports.UI.XRLine line6;
+        private DevExpress.XtraReports.UI.XRLabel label10;
+        private DevExpress.XtraReports.UI.XRLabel label12;
+        private DevExpress.XtraReports.UI.XRLine line4;
         private DevExpress.XtraReports.UI.XRLabel label9;
         private DevExpress.XtraReports.UI.XRLabel label8;
-        private DevExpress.XtraReports.UI.XRLine line4;
-        private DevExpress.XtraReports.UI.XRLine line3;
         private DevExpress.XtraReports.UI.XRLine line2;
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.XtraReports.UI.XRLabel label7;
@@ -73,14 +78,17 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRLabel label3;
         private DevExpress.XtraReports.UI.XRLabel label2;
         private DevExpress.XtraReports.UI.XRLabel label1;
-        private DevExpress.XtraReports.Parameters.Parameter _Lot;
-        private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
-        private DevExpress.XtraReports.Parameters.Parameter _ItemCode;
-        private DevExpress.XtraReports.Parameters.Parameter _bin;
-        private DevExpress.XtraReports.Parameters.Parameter _Coat;
-        private DevExpress.XtraReports.Parameters.Parameter _SimpleCode;
-        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.Parameters.Parameter _Date;
+        private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+        private DevExpress.XtraReports.Parameters.Parameter _barcode;
+        private DevExpress.XtraReports.Parameters.Parameter _Slurry;
+        private DevExpress.XtraReports.Parameters.Parameter _Qty;
+        private DevExpress.XtraReports.Parameters.Parameter _ItemCode;
+        private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+        private DevExpress.XtraReports.Parameters.Parameter _SimpleCode;
+        private DevExpress.XtraReports.Parameters.Parameter _bin;
+        private DevExpress.XtraReports.Parameters.Parameter _ZectLine;
+        private DevExpress.XtraReports.Parameters.Parameter _Lot;
         private System.Resources.ResourceManager _resources;
         private string _resourceString;
         public prntZectConfig() {
@@ -97,29 +105,35 @@ namespace XtraReportSerialization {
         }
         private void InitializeComponent() {
             DevExpress.XtraPrinting.BarCode.DataMatrixGenerator dataMatrixGenerator1 = new DevExpress.XtraPrinting.BarCode.DataMatrixGenerator();
-            this._Qty = new DevExpress.XtraReports.Parameters.Parameter();
-            this._Slurry = new DevExpress.XtraReports.Parameters.Parameter();
-            this._SlurryLot = new DevExpress.XtraReports.Parameters.Parameter();
             this._Description3 = new DevExpress.XtraReports.Parameters.Parameter();
-            this._RT2D = new DevExpress.XtraReports.Parameters.Parameter();
-            this._barcode = new DevExpress.XtraReports.Parameters.Parameter();
-            this._Description2 = new DevExpress.XtraReports.Parameters.Parameter();
-            this._Description1 = new DevExpress.XtraReports.Parameters.Parameter();
-            this._ZectLine = new DevExpress.XtraReports.Parameters.Parameter();
             this._Group = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this._Lot = new DevExpress.XtraReports.Parameters.Parameter();
-            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this._ItemCode = new DevExpress.XtraReports.Parameters.Parameter();
-            this._bin = new DevExpress.XtraReports.Parameters.Parameter();
+            this._RT2D = new DevExpress.XtraReports.Parameters.Parameter();
+            this._Description2 = new DevExpress.XtraReports.Parameters.Parameter();
             this._Coat = new DevExpress.XtraReports.Parameters.Parameter();
-            this._SimpleCode = new DevExpress.XtraReports.Parameters.Parameter();
-            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this._SlurryLot = new DevExpress.XtraReports.Parameters.Parameter();
+            this._Description1 = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this._Date = new DevExpress.XtraReports.Parameters.Parameter();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this._barcode = new DevExpress.XtraReports.Parameters.Parameter();
+            this._Slurry = new DevExpress.XtraReports.Parameters.Parameter();
+            this._Qty = new DevExpress.XtraReports.Parameters.Parameter();
+            this._ItemCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this._SimpleCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this._bin = new DevExpress.XtraReports.Parameters.Parameter();
+            this._ZectLine = new DevExpress.XtraReports.Parameters.Parameter();
+            this._Lot = new DevExpress.XtraReports.Parameters.Parameter();
+            this.label11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.line3 = new DevExpress.XtraReports.UI.XRLine();
+            this.line5 = new DevExpress.XtraReports.UI.XRLine();
+            this.line6 = new DevExpress.XtraReports.UI.XRLine();
+            this.label10 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.line4 = new DevExpress.XtraReports.UI.XRLine();
             this.label9 = new DevExpress.XtraReports.UI.XRLabel();
             this.label8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.line4 = new DevExpress.XtraReports.UI.XRLine();
-            this.line3 = new DevExpress.XtraReports.UI.XRLine();
             this.line2 = new DevExpress.XtraReports.UI.XRLine();
             this.line1 = new DevExpress.XtraReports.UI.XRLine();
             this.label7 = new DevExpress.XtraReports.UI.XRLabel();
@@ -132,59 +146,11 @@ namespace XtraReportSerialization {
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
-            // _Qty
-            // 
-            this._Qty.Description = "Qty";
-            this._Qty.Name = "_Qty";
-            this._Qty.Visible = false;
-            // 
-            // _Slurry
-            // 
-            this._Slurry.Description = "Slurry";
-            this._Slurry.Name = "_Slurry";
-            this._Slurry.Visible = false;
-            // 
-            // _SlurryLot
-            // 
-            this._SlurryLot.Description = "Slurry Lot";
-            this._SlurryLot.Name = "_SlurryLot";
-            this._SlurryLot.Visible = false;
-            // 
             // _Description3
             // 
             this._Description3.Description = "Description 3";
             this._Description3.Name = "_Description3";
             this._Description3.Visible = false;
-            // 
-            // _RT2D
-            // 
-            this._RT2D.Description = "RT2D";
-            this._RT2D.Name = "_RT2D";
-            this._RT2D.Visible = false;
-            // 
-            // _barcode
-            // 
-            this._barcode.Description = "Barcode";
-            this._barcode.Name = "_barcode";
-            this._barcode.Visible = false;
-            // 
-            // _Description2
-            // 
-            this._Description2.Description = "Description 2";
-            this._Description2.Name = "_Description2";
-            this._Description2.Visible = false;
-            // 
-            // _Description1
-            // 
-            this._Description1.Description = "Description 1";
-            this._Description1.Name = "_Description1";
-            this._Description1.Visible = false;
-            // 
-            // _ZectLine
-            // 
-            this._ZectLine.Description = "Zect Line";
-            this._ZectLine.Name = "_ZectLine";
-            this._ZectLine.Visible = false;
             // 
             // _Group
             // 
@@ -192,13 +158,50 @@ namespace XtraReportSerialization {
             this._Group.Name = "_Group";
             this._Group.Visible = false;
             // 
+            // _RT2D
+            // 
+            this._RT2D.Description = "RT2D";
+            this._RT2D.Name = "_RT2D";
+            this._RT2D.Visible = false;
+            // 
+            // _Description2
+            // 
+            this._Description2.Description = "Description 2";
+            this._Description2.Name = "_Description2";
+            this._Description2.Visible = false;
+            // 
+            // _Coat
+            // 
+            this._Coat.Description = "Coat";
+            this._Coat.Name = "_Coat";
+            this._Coat.Visible = false;
+            // 
+            // _SlurryLot
+            // 
+            this._SlurryLot.Description = "Slurry Lot";
+            this._SlurryLot.Name = "_SlurryLot";
+            this._SlurryLot.Visible = false;
+            // 
+            // _Description1
+            // 
+            this._Description1.Description = "Description 1";
+            this._Description1.Name = "_Description1";
+            this._Description1.Visible = false;
+            // 
             // Detail
             // 
+            this.Detail.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label11,
+                        this.label13,
+                        this.line3,
+                        this.line5,
+                        this.line6,
+                        this.label10,
+                        this.label12,
+                        this.line4,
                         this.label9,
                         this.label8,
-                        this.line4,
-                        this.line3,
                         this.line2,
                         this.line1,
                         this.label7,
@@ -213,13 +216,46 @@ namespace XtraReportSerialization {
             this.Detail.HeightF = 558.4825F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.Detail.StylePriority.UseBorders = false;
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // _Lot
+            // _Date
             // 
-            this._Lot.Description = "Lot";
-            this._Lot.Name = "_Lot";
-            this._Lot.Visible = false;
+            this._Date.Description = "Date";
+            this._Date.Name = "_Date";
+            this._Date.Visible = false;
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.Dpi = 254F;
+            this.BottomMargin.HeightF = 2.434202F;
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // _barcode
+            // 
+            this._barcode.Description = "Barcode";
+            this._barcode.Name = "_barcode";
+            this._barcode.Visible = false;
+            // 
+            // _Slurry
+            // 
+            this._Slurry.Description = "Slurry";
+            this._Slurry.Name = "_Slurry";
+            this._Slurry.Visible = false;
+            // 
+            // _Qty
+            // 
+            this._Qty.Description = "Qty";
+            this._Qty.Name = "_Qty";
+            this._Qty.Visible = false;
+            // 
+            // _ItemCode
+            // 
+            this._ItemCode.Description = "Item Code";
+            this._ItemCode.Name = "_ItemCode";
+            this._ItemCode.Visible = false;
             // 
             // TopMargin
             // 
@@ -229,11 +265,11 @@ namespace XtraReportSerialization {
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // _ItemCode
+            // _SimpleCode
             // 
-            this._ItemCode.Description = "Item Code";
-            this._ItemCode.Name = "_ItemCode";
-            this._ItemCode.Visible = false;
+            this._SimpleCode.Description = "Simple Code";
+            this._SimpleCode.Name = "_SimpleCode";
+            this._SimpleCode.Visible = false;
             // 
             // _bin
             // 
@@ -241,43 +277,124 @@ namespace XtraReportSerialization {
             this._bin.Name = "_bin";
             this._bin.Visible = false;
             // 
-            // _Coat
+            // _ZectLine
             // 
-            this._Coat.Description = "Coat";
-            this._Coat.Name = "_Coat";
-            this._Coat.Visible = false;
+            this._ZectLine.Description = "Zect Line";
+            this._ZectLine.Name = "_ZectLine";
+            this._ZectLine.Visible = false;
             // 
-            // _SimpleCode
+            // _Lot
             // 
-            this._SimpleCode.Description = "Simple Code";
-            this._SimpleCode.Name = "_SimpleCode";
-            this._SimpleCode.Visible = false;
+            this._Lot.Description = "Lot";
+            this._Lot.Name = "_Lot";
+            this._Lot.Visible = false;
             // 
-            // BottomMargin
+            // label11
             // 
-            this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 0F;
-            this.BottomMargin.Name = "BottomMargin";
-            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.label11.Angle = 90F;
+            this.label11.Dpi = 254F;
+            this.label11.Font = new System.Drawing.Font("Calibri", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label11.LocationFloat = new DevExpress.Utils.PointFloat(624.7336F, 232.1664F);
+            this.label11.Name = "label11";
+            this.label11.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label11.SizeF = new System.Drawing.SizeF(63.5F, 235.4798F);
+            this.label11.StylePriority.UseFont = false;
+            this.label11.StylePriority.UseTextAlignment = false;
+            this.label11.Text = "Quantity:";
+            this.label11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
-            // _Date
+            // label13
             // 
-            this._Date.Description = "Date";
-            this._Date.Name = "_Date";
-            this._Date.Visible = false;
+            this.label13.Angle = 90F;
+            this.label13.Dpi = 254F;
+            this.label13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+                        new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Substring(FormatString(\'{0:#,#}\',ToDecimal(?_Qty)), 0, LEN(FormatString(\'{0:#,#}\'" +
+                                ",ToDecimal(?_Qty)))-4)")});
+            this.label13.Font = new System.Drawing.Font("Calibri", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label13.LocationFloat = new DevExpress.Utils.PointFloat(624.7336F, 19.7079F);
+            this.label13.Name = "label13";
+            this.label13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label13.SizeF = new System.Drawing.SizeF(71.14581F, 212.4585F);
+            this.label13.StylePriority.UseFont = false;
+            this.label13.StylePriority.UseTextAlignment = false;
+            this.label13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            // 
+            // line3
+            // 
+            this.line3.BorderWidth = 0F;
+            this.line3.Dpi = 254F;
+            this.line3.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.line3.LocationFloat = new DevExpress.Utils.PointFloat(1234.125F, 22.35418F);
+            this.line3.Name = "line3";
+            this.line3.SizeF = new System.Drawing.SizeF(15.87488F, 437.3541F);
+            this.line3.StylePriority.UseBorderWidth = false;
+            // 
+            // line5
+            // 
+            this.line5.Dpi = 254F;
+            this.line5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 465.0002F);
+            this.line5.Name = "line5";
+            this.line5.SizeF = new System.Drawing.SizeF(1250F, 18.52087F);
+            // 
+            // line6
+            // 
+            this.line6.Dpi = 254F;
+            this.line6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 6.479256F);
+            this.line6.Name = "line6";
+            this.line6.SizeF = new System.Drawing.SizeF(1250F, 18.52087F);
+            // 
+            // label10
+            // 
+            this.label10.Angle = 90F;
+            this.label10.Dpi = 254F;
+            this.label10.Font = new System.Drawing.Font("Calibri", 7.75F);
+            this.label10.LocationFloat = new DevExpress.Utils.PointFloat(1162.688F, 303.6042F);
+            this.label10.Name = "label10";
+            this.label10.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label10.SizeF = new System.Drawing.SizeF(71.43744F, 164.042F);
+            this.label10.StylePriority.UseFont = false;
+            this.label10.StylePriority.UseTextAlignment = false;
+            this.label10.Text = "Time Printed: ";
+            this.label10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            // 
+            // label12
+            // 
+            this.label12.Angle = 90F;
+            this.label12.Dpi = 254F;
+            this.label12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+                        new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "LocalDateTimeNow()")});
+            this.label12.Font = new System.Drawing.Font("Calibri", 6.75F, System.Drawing.FontStyle.Bold);
+            this.label12.LocationFloat = new DevExpress.Utils.PointFloat(1162.688F, 25.00021F);
+            this.label12.Name = "label12";
+            this.label12.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label12.SizeF = new System.Drawing.SizeF(71.43744F, 278.604F);
+            this.label12.StylePriority.UseFont = false;
+            this.label12.StylePriority.UseTextAlignment = false;
+            this.label12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.label12.TextFormatString = "{0:HH:mm:ss}";
+            // 
+            // line4
+            // 
+            this.line4.BorderWidth = 0F;
+            this.line4.Dpi = 254F;
+            this.line4.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
+            this.line4.LocationFloat = new DevExpress.Utils.PointFloat(1075.375F, 22.35397F);
+            this.line4.Name = "line4";
+            this.line4.SizeF = new System.Drawing.SizeF(15.87488F, 437.3541F);
+            this.line4.StylePriority.UseBorderWidth = false;
             // 
             // label9
             // 
             this.label9.Angle = 90F;
             this.label9.Dpi = 254F;
             this.label9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-                        new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?_ItemCode")});
-            this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.LocationFloat = new DevExpress.Utils.PointFloat(373.1084F, 25.00013F);
+                        new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "REVERSE(SUBSTRING(REVERSE(?_ItemCode), CHARINDEX(\'-\', REVERSE(?_ItemCode)) + 1,5)" +
+                                ")")});
+            this.label9.Font = new System.Drawing.Font("Calibri", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label9.LocationFloat = new DevExpress.Utils.PointFloat(271.1084F, 25.00001F);
             this.label9.Name = "label9";
             this.label9.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label9.SizeF = new System.Drawing.SizeF(68.79175F, 273.3125F);
+            this.label9.SizeF = new System.Drawing.SizeF(68.79175F, 212.4584F);
             this.label9.StylePriority.UseFont = false;
             this.label9.StylePriority.UseTextAlignment = false;
             this.label9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -286,93 +403,77 @@ namespace XtraReportSerialization {
             // 
             this.label8.Angle = 90F;
             this.label8.Dpi = 254F;
-            this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label8.LocationFloat = new DevExpress.Utils.PointFloat(373.1084F, 314.1875F);
+            this.label8.Font = new System.Drawing.Font("Calibri", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label8.LocationFloat = new DevExpress.Utils.PointFloat(271.1084F, 237.4582F);
             this.label8.Name = "label8";
             this.label8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label8.SizeF = new System.Drawing.SizeF(63.5F, 219.2951F);
+            this.label8.SizeF = new System.Drawing.SizeF(63.5F, 230.1878F);
             this.label8.StylePriority.UseFont = false;
             this.label8.StylePriority.UseTextAlignment = false;
-            this.label8.Text = "Item Code:";
+            this.label8.Text = "Product Name:";
             this.label8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            // 
-            // line4
-            // 
-            this.line4.Dpi = 254F;
-            this.line4.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line4.LineWidth = 4F;
-            this.line4.LocationFloat = new DevExpress.Utils.PointFloat(957.7708F, 25.00013F);
-            this.line4.Name = "line4";
-            this.line4.SizeF = new System.Drawing.SizeF(34.39587F, 508.4825F);
-            // 
-            // line3
-            // 
-            this.line3.Dpi = 254F;
-            this.line3.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
-            this.line3.LineWidth = 4F;
-            this.line3.LocationFloat = new DevExpress.Utils.PointFloat(1063.604F, 24.99993F);
-            this.line3.Name = "line3";
-            this.line3.SizeF = new System.Drawing.SizeF(34.39575F, 508.4827F);
             // 
             // line2
             // 
             this.line2.Dpi = 254F;
             this.line2.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line2.LineWidth = 4F;
-            this.line2.LocationFloat = new DevExpress.Utils.PointFloat(252.5417F, 24.99993F);
+            this.line2.LocationFloat = new DevExpress.Utils.PointFloat(178.4584F, 22.35397F);
             this.line2.Name = "line2";
-            this.line2.SizeF = new System.Drawing.SizeF(34.39584F, 508.4826F);
+            this.line2.SizeF = new System.Drawing.SizeF(34.39583F, 442.6462F);
             // 
             // line1
             // 
             this.line1.Dpi = 254F;
             this.line1.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.line1.LineWidth = 4F;
-            this.line1.LocationFloat = new DevExpress.Utils.PointFloat(122.8958F, 25.00001F);
+            this.line1.LocationFloat = new DevExpress.Utils.PointFloat(48.81241F, 22.35405F);
             this.line1.Name = "line1";
-            this.line1.SizeF = new System.Drawing.SizeF(34.39582F, 508.4825F);
+            this.line1.SizeF = new System.Drawing.SizeF(34.39583F, 442.6461F);
             // 
             // label7
             // 
             this.label7.Angle = 90F;
             this.label7.Dpi = 254F;
             this.label7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-                        new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?_Date")});
-            this.label7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(992.1667F, 25.00013F);
+                        new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "LocalDateTimeNow()")});
+            this.label7.Font = new System.Drawing.Font("Calibri", 6.75F, System.Drawing.FontStyle.Bold);
+            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(1091.25F, 22.35418F);
             this.label7.Name = "label7";
             this.label7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label7.SizeF = new System.Drawing.SizeF(71.43756F, 376.2883F);
+            this.label7.SizeF = new System.Drawing.SizeF(71.4375F, 278.604F);
             this.label7.StylePriority.UseFont = false;
             this.label7.StylePriority.UseTextAlignment = false;
             this.label7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.label7.TextFormatString = "{0:dddd, dd MMM yyyy}";
             // 
             // label6
             // 
             this.label6.Angle = 90F;
             this.label6.Dpi = 254F;
-            this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.LocationFloat = new DevExpress.Utils.PointFloat(992.1667F, 445.9583F);
+            this.label6.Font = new System.Drawing.Font("Calibri", 7.75F);
+            this.label6.LocationFloat = new DevExpress.Utils.PointFloat(1091.25F, 303.6042F);
             this.label6.Name = "label6";
             this.label6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label6.SizeF = new System.Drawing.SizeF(71.43756F, 87.52423F);
+            this.label6.SizeF = new System.Drawing.SizeF(71.4375F, 161.396F);
             this.label6.StylePriority.UseFont = false;
             this.label6.StylePriority.UseTextAlignment = false;
-            this.label6.Text = "Date: ";
+            this.label6.Text = "Date Printed: ";
             this.label6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // barCode1
             // 
+            this.barCode1.Alignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.barCode1.BarCodeOrientation = DevExpress.XtraPrinting.BarCode.BarCodeOrientation.RotateLeft;
             this.barCode1.Dpi = 254F;
             this.barCode1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
                         new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?_RT2D")});
-            this.barCode1.LocationFloat = new DevExpress.Utils.PointFloat(698.3961F, 103.1873F);
-            this.barCode1.Module = 7F;
+            this.barCode1.LocationFloat = new DevExpress.Utils.PointFloat(710.1669F, 84.87782F);
+            this.barCode1.Module = 12F;
             this.barCode1.Name = "barCode1";
             this.barCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(25, 25, 0, 0, 254F);
             this.barCode1.ShowText = false;
-            this.barCode1.SizeF = new System.Drawing.SizeF(259.3748F, 237.2467F);
+            this.barCode1.SizeF = new System.Drawing.SizeF(338.7496F, 311.3302F);
             this.barCode1.Symbology = dataMatrixGenerator1;
             // 
             // label5
@@ -380,12 +481,12 @@ namespace XtraReportSerialization {
             this.label5.Angle = 90F;
             this.label5.Dpi = 254F;
             this.label5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-                        new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?_Description1")});
-            this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.LocationFloat = new DevExpress.Utils.PointFloat(501.1667F, 25.00013F);
+                        new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?_Coat")});
+            this.label5.Font = new System.Drawing.Font("Calibri", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label5.LocationFloat = new DevExpress.Utils.PointFloat(399.1667F, 25.00001F);
             this.label5.Name = "label5";
             this.label5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label5.SizeF = new System.Drawing.SizeF(68.79175F, 273.3125F);
+            this.label5.SizeF = new System.Drawing.SizeF(68.79175F, 212.4584F);
             this.label5.StylePriority.UseFont = false;
             this.label5.StylePriority.UseTextAlignment = false;
             this.label5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -394,25 +495,25 @@ namespace XtraReportSerialization {
             // 
             this.label4.Angle = 90F;
             this.label4.Dpi = 254F;
-            this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label4.LocationFloat = new DevExpress.Utils.PointFloat(501.1667F, 314.1875F);
+            this.label4.Font = new System.Drawing.Font("Calibri", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label4.LocationFloat = new DevExpress.Utils.PointFloat(399.1667F, 237.4582F);
             this.label4.Name = "label4";
             this.label4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label4.SizeF = new System.Drawing.SizeF(63.5F, 219.2951F);
+            this.label4.SizeF = new System.Drawing.SizeF(63.5F, 230.1878F);
             this.label4.StylePriority.UseFont = false;
             this.label4.StylePriority.UseTextAlignment = false;
-            this.label4.Text = "Product:";
+            this.label4.Text = "Coat:";
             this.label4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // label3
             // 
             this.label3.Angle = 90F;
             this.label3.Dpi = 254F;
-            this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(614.0211F, 314.1875F);
+            this.label3.Font = new System.Drawing.Font("Calibri", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(512.0211F, 237.4582F);
             this.label3.Name = "label3";
             this.label3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label3.SizeF = new System.Drawing.SizeF(63.5F, 219.2951F);
+            this.label3.SizeF = new System.Drawing.SizeF(63.5F, 230.1878F);
             this.label3.StylePriority.UseFont = false;
             this.label3.StylePriority.UseTextAlignment = false;
             this.label3.Text = "Lot Number:";
@@ -424,11 +525,11 @@ namespace XtraReportSerialization {
             this.label2.Dpi = 254F;
             this.label2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
                         new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?_Lot")});
-            this.label2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(606.3753F, 25.00001F);
+            this.label2.Font = new System.Drawing.Font("Calibri", 7.75F, System.Drawing.FontStyle.Bold);
+            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(504.3752F, 24.99989F);
             this.label2.Name = "label2";
             this.label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.label2.SizeF = new System.Drawing.SizeF(71.14581F, 273.3125F);
+            this.label2.SizeF = new System.Drawing.SizeF(71.14581F, 212.4585F);
             this.label2.StylePriority.UseFont = false;
             this.label2.StylePriority.UseTextAlignment = false;
             this.label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -438,13 +539,13 @@ namespace XtraReportSerialization {
             this.label1.Angle = 90F;
             this.label1.Dpi = 254F;
             this.label1.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(157.2916F, 25.00013F);
+            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(83.20824F, 22.35418F);
             this.label1.Name = "label1";
             this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.label1.SizeF = new System.Drawing.SizeF(95.25003F, 440F);
             this.label1.StylePriority.UseFont = false;
             this.label1.StylePriority.UseTextAlignment = false;
-            this.label1.Text = "Job Tag";
+            this.label1.Text = "JOB TAG";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // prntZectConfig
@@ -453,12 +554,15 @@ namespace XtraReportSerialization {
                         this.Detail,
                         this.TopMargin,
                         this.BottomMargin});
+            this.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+                        | DevExpress.XtraPrinting.BorderSide.Right) 
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.DisplayName = "ZECT Job Tag";
             this.Dpi = 254F;
-            this.Margins = new System.Drawing.Printing.Margins(28, 0, 0, 0);
+            this.Margins = new System.Drawing.Printing.Margins(0, 29, 0, 2);
             this.Name = "prntZectConfig";
             this.PageHeight = 490;
-            this.PageWidth = 1151;
+            this.PageWidth = 1304;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
                         this._barcode,
@@ -480,6 +584,7 @@ namespace XtraReportSerialization {
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.ShowPrintMarginsWarning = false;
             this.SnapGridSize = 25F;
+            this.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.Version = "20.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
         }

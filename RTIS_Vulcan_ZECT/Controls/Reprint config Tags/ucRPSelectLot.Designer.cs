@@ -86,7 +86,6 @@
             this.vsbFG.Location = new System.Drawing.Point(1119, 0);
             this.vsbFG.Margin = new System.Windows.Forms.Padding(4);
             this.vsbFG.Name = "vsbFG";
-            this.vsbFG.Opacity = 1F;
             this.vsbFG.Size = new System.Drawing.Size(89, 624);
             this.vsbFG.TabIndex = 1;
             this.vsbFG.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vsbFG_Scroll);
